@@ -1,49 +1,31 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-
-let posts = [
-
-    {
-        id: 0,
-        title: "Teste do mural",
-        Description: "Descrição do post"
-    }, 
-    {
-        id: 1, 
-        title: "Teste do mural",
-        Description: "Descrição do post"
-    }, 
-    {
-        id: 2,
-        title: "Teste do mural",
-        Description: "Descrição do post"
-    }
-
-];
-
-function generateID(){
-
-    return Math.random().toString(36).substring(2, 9);
-
-}
+const posts = require("./Model/posts");
 
 app.get("/all", (req, res) => {
 
-    res.json(JSON.stringify(posts));
+    res.json(JSON.stringify(posts.getAll()));
 
 });
 
 app.post("/new", bodyParser.json(), (req, res) => {
 
-    let id = generateID();
     let title = req.body.title;
-    let Description = req.body.Description;
+    let description = req.body.description;
 
-    posts.push(id, title, Description);
+    posts.newPost(title, description);
 
     res.send("Post adicionado");
 
+});
+
+app.delete("/remove/:id", (req, res) => {
+    const postId = req.params.id;
+
+    posts.deletePost(postId);
+
+    res.send("Removido com sucesso");
 });
 
 
