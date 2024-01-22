@@ -1,0 +1,19 @@
+{
+  "name": "mural_de_avisos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alyssandro1771415/Mural_de_Avisos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alyssandro1771415/Mural_de_Avisos/issues"
+  },
+  "homepage": "https://github.com/Alyssandro1771415/Mural_de_Avisos#readme"
+}
