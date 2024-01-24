@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function updatePosts(){
 
-    fetch("http://localhost:3000/api/all").then(res => {
+    fetch("http://192.168.181.42:3000/api/all").then(res => {
 
         return res.json();
 

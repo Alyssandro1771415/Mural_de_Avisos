@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const posts = require("../Model/posts");
 const bodyParser = require("body-parser");
+const cors = require("cors");
+
+router.use(cors());
 
 router.get("/all", (req, res) => {
 
