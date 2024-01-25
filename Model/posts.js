@@ -1,25 +1,7 @@
 module.exports = {
 
 
-    posts: [
-
-        {
-            id: 0,
-            title: "Teste do mural",
-            description: "Descrição do post"
-        }, 
-        {
-            id: 1, 
-            title: "Teste do mural",
-            description: "Descrição do post"
-        }, 
-        {
-            id: 2,
-            title: "Teste do mural",
-            description: "Descrição do post"
-        }
-    
-    ],
+    posts: [],
 
     getAll(){
         return this.posts;

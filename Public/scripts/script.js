@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updatePosts();
 
-})
+});
 
 function updatePosts(){
 
